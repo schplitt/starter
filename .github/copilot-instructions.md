@@ -5,6 +5,7 @@ This file provides guidance for GitHub Copilot when working on this project. It 
 ## How to Customize
 
 Add instructions for:
+
 - **Project setup**: Build and test commands (e.g., `pnpm install`, `pnpm test`, `pnpm build`)
 - **Code conventions**: Naming patterns, file organization, preferred patterns
 - **Build tools and dependencies**: Key libraries, frameworks, and their versions
