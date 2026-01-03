@@ -2,7 +2,7 @@
   "name": "@schplitt/starter",
   "version": "0.0.0",
   "type": "module",
-  "packageManager": "pnpm@10.25.0",
+  "packageManager": "pnpm@10.27.0",
   "description": "A minimal TypeScript starter template with ESM, Vitest, and ESLint",
   "keywords": [
     "typescript",
@@ -49,8 +49,8 @@
     "@schplitt/eslint-config": "^1.2.0",
     "bumpp": "^10.3.2",
     "eslint": "^9.39.2",
-    "tsdown": "^0.17.0",
-    "typescript": "^5.9.2",
+    "tsdown": "^0.18.4",
+    "typescript": "^5.9.3",
     "vitest": "^4.0.16"
   },
   "engines": {
