@@ -79,3 +79,23 @@ When working on this project:
 4. **Update this file** when adding new modules, APIs, or changing architecture
 5. **Keep exports in `src/index.ts`** — all public API should be exported from the main entry point
 6. **Add tests** for new functionality in the `tests/` directory
+7. **Record learnings** — When the user corrects a mistake or provides context about how something should be done, add it to the "Project Context & Learnings" section below if it's a recurring pattern (not a one-time fix)
+8. **Notify documentation changes** — When updating `README.md` or `AGENTS.md`, explicitly call out the changes to the user at the end of your response so they can review and don't overlook them
+
+## Project Context & Learnings
+
+This section captures project-specific knowledge, tool quirks, and lessons learned during development. When the user provides corrections or context about how things should be done in this project, add them here if they are recurring patterns (not a one-time fix).
+
+> **Note:** Before adding something here, consider: Is this a one-time fix, or will it come up again? Only document patterns that are likely to recur or are notable enough to prevent future mistakes.
+
+### Tools & Dependencies
+
+<!-- Add tool-specific notes, required configurations, or gotchas here -->
+
+### Patterns & Conventions
+
+<!-- Add project-specific patterns, preferred approaches, or conventions here -->
+
+### Common Mistakes to Avoid
+
+<!-- Add things that have been done wrong before and should be avoided -->
