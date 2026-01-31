@@ -43,7 +43,8 @@
     "typecheck": "tsc --noEmit",
     "prerelease": "eslint && tsc --noEmit && tsdown",
     "release": "bumpp",
-    "test": "vitest"
+    "test": "vitest",
+    "test:run": "vitest run"
   },
   "devDependencies": {
     "@schplitt/eslint-config": "^1.2.0",

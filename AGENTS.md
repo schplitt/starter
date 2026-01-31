@@ -30,6 +30,7 @@ tests/
 ```sh
 pnpm install    # Install dependencies
 pnpm test       # Run tests with Vitest (watch mode)
+pnpm test:run   # Run tests once (non-watch mode, for CI/automated workflows)
 pnpm build      # Build with tsdown
 pnpm lint       # Lint with ESLint
 pnpm lint:fix   # Lint and auto-fix
@@ -49,6 +50,7 @@ pnpm typecheck  # TypeScript type checking
 - Write tests in the `tests/` directory
 - Use `*.test.ts` file naming convention
 - Run `pnpm test` for watch mode during development
+- Run `pnpm test:run` for single test run (use this in automated workflows)
 - Import modules from `../src`
 
 Example test structure:
@@ -64,16 +66,32 @@ test('should do something', () => {
 
 ## Maintaining Documentation
 
-When making changes to the project (new APIs, architectural changes, updated conventions):
+When making changes to the project:
 
 - **`AGENTS.md`** — Update with technical details, architecture, and best practices for AI agents
-- **`README.md`** — Update with user-facing documentation (usage, installation, examples) for end users
+  - Project architecture and file structure
+  - Internal patterns and conventions
+  - Development workflows
+  - Testing strategies
+  - Build/deployment processes
+  - Code organization principles
+  - Tool configurations and quirks
+
+- **`README.md`** — Update with user-facing documentation for end users:
+  - ✅ New exported utilities or functions from the package
+  - ✅ New configuration options users can set
+  - ✅ New CLI commands or features
+  - ✅ Changes to existing API behavior
+  - ✅ Environment variables users can set
+  - ✅ Any feature users can configure, use, or interact with
+  - ✅ Installation or setup instructions
+  - ✅ Usage examples and code snippets
 
 ## Agent Guidelines
 
 When working on this project:
 
-1. **Run tests** after making changes: `pnpm test`
+1. **Run tests** after making changes: `pnpm test:run` (runs once, no watch mode)
 2. **Run linting** to ensure code quality: `pnpm lint`
 3. **Run type checking** before committing: `pnpm typecheck`
 4. **Update this file** when adding new modules, APIs, or changing architecture
