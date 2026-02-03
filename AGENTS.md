@@ -29,8 +29,7 @@ tests/
 
 ```sh
 pnpm install    # Install dependencies
-pnpm test       # Run tests with Vitest (watch mode)
-pnpm test:run   # Run tests once (non-watch mode, for CI/automated workflows)
+pnpm test:run   # Run tests
 pnpm build      # Build with tsdown
 pnpm lint       # Lint with ESLint
 pnpm lint:fix   # Lint and auto-fix
@@ -49,8 +48,7 @@ pnpm typecheck  # TypeScript type checking
 
 - Write tests in the `tests/` directory
 - Use `*.test.ts` file naming convention
-- Run `pnpm test` for watch mode during development
-- Run `pnpm test:run` for single test run (use this in automated workflows)
+- Run `pnpm test:run` for running tests
 - Import modules from `../src`
 
 Example test structure:
