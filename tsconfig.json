@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+
+    "exactOptionalPropertyTypes": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noPropertyAccessFromIndexSignature": false,
@@ -17,7 +19,11 @@
     "resolveJsonModule": true,
     "declaration": true,
     "noEmit": true,
+    "erasableSyntaxOnly": true,
     "esModuleInterop": true,
+
+"forceConsistentCasingInFileNames": true,
+    "isolatedDeclarations": true,
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
     "lib": ["esnext"],
