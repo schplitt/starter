@@ -46,13 +46,16 @@
     "test": "vitest",
     "test:run": "vitest run"
   },
+  "dependencies": {
+    "changelogithub": "catalog:"
+  },
   "devDependencies": {
-    "@schplitt/eslint-config": "^1.2.0",
-    "bumpp": "^10.4.0",
-    "eslint": "^9.39.2",
-    "tsdown": "^0.20.1",
-    "typescript": "^5.9.3",
-    "vitest": "^4.0.18"
+    "@schplitt/eslint-config": "catalog:",
+    "bumpp": "catalog:",
+    "eslint": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
   },
   "engines": {
     "node": ">=20.0.0"

@@ -45,7 +45,7 @@ jobs:
       - name: Update npm
         run: npm install -g npm@latest
 
-      - run: pnpm dlx changelogithub
+      - run: pnpm changelogithub
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
