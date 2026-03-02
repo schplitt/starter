@@ -52,4 +52,5 @@ jobs:
       - name: Publish to NPM
         run: pnpm publish --access public --no-git-checks
         env:
+          # Update to OIDC after first publish
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
