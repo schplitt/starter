@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-
     "exactOptionalPropertyTypes": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
@@ -8,28 +7,27 @@
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-
     "strict": true,
     "strictNullChecks": true,
     "module": "esnext",
     "moduleResolution": "bundler",
     "noUncheckedSideEffectImports": true,
-
-    
     "resolveJsonModule": true,
     "declaration": true,
     "noEmit": true,
     "erasableSyntaxOnly": true,
     "esModuleInterop": true,
-
-"forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": true,
     "isolatedDeclarations": true,
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
-    "lib": ["esnext"],
+    "lib": [
+      "esnext"
+    ],
     "moduleDetection": "force",
     "target": "esnext",
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
-  }
+  },
+  "include": ["./src/**/*"]
 }
