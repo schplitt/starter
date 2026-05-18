@@ -97,6 +97,13 @@ When working on this project:
 6. **Add tests** for new functionality in the `tests/` directory
 7. **Record learnings** — When the user corrects a mistake or provides context about how something should be done, add it to the "Project Context & Learnings" section below if it's a recurring pattern (not a one-time fix)
 8. **Notify documentation changes** — When updating `README.md` or `AGENTS.md`, explicitly call out the changes to the user at the end of your response so they can review and don't overlook them
+9. **Use available workflow tools first** — When the user asks for branch/commit/PR workflow, use the available MCP/devtools first. Only fall back to `gh` CLI when those tools are not available.
+10. **Use conventional naming for git workflow** — Branch names should use conventional prefixes where appropriate, such as `feat/`, `fix/`, `chore/`, `docs/`, `refactor/`, `test/`, `build/`, `types/`, `style/`, `perf/`, `examples/`, and `ci/`. Commit subjects and PR titles should use conventional-commit style with the most appropriate type.
+11. **Default PR behavior** — If the current branch already contains the related work, assume the PR should be opened from the current branch to `main` unless the user explicitly asks to isolate only part of the work or use a different base branch.
+12. **Always include a PR body** — PRs created for the user must include a body. If a related issue identifier is known, include the appropriate GitHub-style reference.
+13. **Prefer autofix first** — Strongly prefer running `pnpm lint:fix` before manually fixing lintable issues by hand. For automated validation, prefer this order: `pnpm test:run` → `pnpm lint:fix` → `pnpm typecheck`.
+14. **Ask when requirements are unclear** — If requirements are ambiguous, ask a focused clarifying question instead of implementing a guessed solution.
+15. **Prefer simple inline logic over trivial helpers** — Do not introduce tiny one-line helper/utility functions or throwaway `parse*` helpers for trivial one-off logic. Inline simple normalization or branching unless there is real reuse or a clear API boundary.
 
 ## Project Context & Learnings
 
@@ -106,12 +113,18 @@ This section captures project-specific knowledge, tool quirks, and lessons learn
 
 ### Tools & Dependencies
 
-<!-- Add tool-specific notes, required configurations, or gotchas here -->
+- Use `pnpm test:run` in automated/agent workflows. Do not use `pnpm test` there because it starts watch mode.
+- Prefer `pnpm lint:fix` before spending time on manual lint/style cleanup.
 
 ### Patterns & Conventions
 
-<!-- Add project-specific patterns, preferred approaches, or conventions here -->
+- Use conventional branch prefixes and conventional-commit style commit subjects / PR titles.
+- Prefer simple, clean, reusable solutions over ad-hoc implementations.
+- Keep trivial one-off normalization and branching inline instead of extracting tiny helper functions too early.
+- If requirements are ambiguous, ask a focused clarifying question before implementing.
 
 ### Common Mistakes to Avoid
 
-<!-- Add things that have been done wrong before and should be avoided -->
+- Do not use `pnpm test` in automation.
+- Do not create tiny helper/utility functions or `parse*`/`normalize*` wrappers for trivial one-off logic.
+- Do not guess when the requested behavior or scope is unclear.
