@@ -47,11 +47,11 @@
     "test:run": "vitest run"
   },
   "dependencies": {
-    "changelogithub": "catalog:"
   },
   "devDependencies": {
     "@schplitt/eslint-config": "catalog:",
     "bumpp": "catalog:",
+    "changelogithub": "catalog:",
     "eslint": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
